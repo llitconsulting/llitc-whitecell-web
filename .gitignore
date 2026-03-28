@@ -1,10 +1,17 @@
 # GitHub
-.git
-.github
+/.git/
+/.github/
 
 # JetBrains
-.idea
+/.idea/
 *.iml
+
+# VS Code
+/.vscode/
+
+# Generated Code
+/bin/
+/public/
 
 # Firebase build and deployment files
 /firebase-debug.log
