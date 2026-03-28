@@ -1,6 +1,6 @@
-baseURL = 'https://www.whitecell-inc.org/'
-languageCode = 'en-us'
-title = 'White Cell Inc.'
+baseURL = "https://www.whitecell-inc.org/"
+languageCode = "en-us"
+title = "White Cell Inc."
 disableKinds = ["taxonomy", "term"]
 
 [params]
@@ -8,3 +8,4 @@ disableKinds = ["taxonomy", "term"]
   email = "info@whitecell-inc.org
   phone = ""
   tagline = "Supporting Immune Health in Northwest Arkansas"
+
