@@ -5,7 +5,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "White Cell, Inc. is a non-profit support organization for patients with primary immune deficiencies, hereditary angioedema, and severe allergic reactions in Northwest Arkansas."
-  email = "info@whitecell-inc.org
+  email = "info@whitecell-inc.org"
   phone = ""
   tagline = "Supporting Immune Health in Northwest Arkansas"
 
