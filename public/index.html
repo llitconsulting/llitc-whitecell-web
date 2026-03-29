@@ -1,89 +1,255 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.151.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Cell Inc. | Supporting Immune Health in Northwest Arkansas</title>
+  <meta name="description" content="White Cell, Inc. is a non-profit support organization for patients with primary immune deficiencies, hereditary angioedema, and severe allergic reactions in Northwest Arkansas.">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.11.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.11.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.11.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <link rel="icon" type="image/png" href="/favicon.png">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'wc-blue':  '#327BB0',
+            'wc-light': '#AFD6F2',
+          },
+          fontFamily: {
+            'bauhaus': ['Jost', 'sans-serif'],
+            'apparat': ['Inter', 'sans-serif'],
+          },
         }
-      });
-    </script>
-  </body>
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    body { @apply font-apparat text-gray-800 antialiased; }
+    h1, h2, h3, h4, h5, h6 { @apply font-bauhaus; }
+  </style>
+</head>
+<body class="bg-white">
+
+  
+<header class="sticky top-0 z-50 bg-white shadow-md">
+  <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/">
+      <img src="/images/logo-horizontal.png" alt="White Cell Inc." class="h-12">
+    </a>
+    <ul class="hidden md:flex gap-8 font-bauhaus font-medium text-wc-blue">
+      <li><a href="#mission"  class="hover:text-wc-light transition-colors duration-200">Mission</a></li>
+      <li><a href="#services" class="hover:text-wc-light transition-colors duration-200">Services</a></li>
+      <li><a href="#about"    class="hover:text-wc-light transition-colors duration-200">About</a></li>
+    </ul>
+    
+    <button
+      class="md:hidden text-wc-blue"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <ul class="flex flex-col font-bauhaus font-medium text-wc-blue px-6 py-4 gap-4">
+      <li><a href="#mission"  class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Mission</a></li>
+      <li><a href="#services" class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a></li>
+      <li><a href="#about"    class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a></li>
+    </ul>
+  </div>
+</header>
+
+
+  <main>
+    
+
+
+<section class="relative bg-wc-blue overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="cells" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <circle cx="40" cy="40" r="30" fill="none" stroke="white" stroke-width="1"/>
+          <circle cx="0"  cy="0"  r="15" fill="none" stroke="white" stroke-width="1"/>
+          <circle cx="80" cy="0"  r="15" fill="none" stroke="white" stroke-width="1"/>
+          <circle cx="0"  cy="80" r="15" fill="none" stroke="white" stroke-width="1"/>
+          <circle cx="80" cy="80" r="15" fill="none" stroke="white" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#cells)"/>
+    </svg>
+  </div>
+  <div class="relative max-w-5xl mx-auto px-6 py-28 text-center">
+    <div class="bg-white rounded-2xl px-8 py-5 inline-block mb-8 shadow-lg">
+      <img
+        src="/images/logo-horizontal.png"
+        alt="White Cell Inc."
+        class="h-20 md:h-28"
+      >
+    </div>
+    <p class="text-wc-light font-bauhaus text-xl md:text-3xl tracking-wide">
+      Supporting Immune Health in Northwest Arkansas
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#mission"
+        class="bg-white text-wc-blue font-bauhaus font-semibold px-8 py-3 rounded-full hover:bg-wc-light transition-colors duration-200">
+        Learn More
+      </a>
+      <a href="#about"
+        class="border-2 border-wc-light text-wc-light font-bauhaus font-semibold px-8 py-3 rounded-full hover:bg-white/10 transition-colors duration-200">
+        About Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="mission" class="py-24 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl text-wc-blue mb-3">Our Mission</h2>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-10 rounded-full"></div>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      White Cell, Inc. is a non-profit organization formed to assist with a support group for patients in
+      Northwest Arkansas. Our support group holds monthly meetings and provides resources, compassionate giving,
+      educational lectures, and materials for patients and families living with primary immune deficiencies,
+      hereditary angioedema, and severe allergic reactions.
+    </p>
+  </div>
+</section>
+
+
+<section id="services" class="py-24 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl text-wc-blue text-center mb-3">What We Provide</h2>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-14 rounded-full"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-wc-light/40 text-center">
+        <div class="w-14 h-14 bg-wc-light/50 rounded-full flex items-center justify-center mx-auto mb-5">
+          <svg class="w-7 h-7 text-wc-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="text-wc-blue text-lg mb-2">Resources</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Connecting patients and families with the information and tools they need.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-wc-light/40 text-center">
+        <div class="w-14 h-14 bg-wc-light/50 rounded-full flex items-center justify-center mx-auto mb-5">
+          <svg class="w-7 h-7 text-wc-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-wc-blue text-lg mb-2">Monthly Meetings</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Regular support group gatherings for patients and their families.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-wc-light/40 text-center">
+        <div class="w-14 h-14 bg-wc-light/50 rounded-full flex items-center justify-center mx-auto mb-5">
+          <svg class="w-7 h-7 text-wc-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-wc-blue text-lg mb-2">Compassionate Giving</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Providing compassionate support and assistance to those in need.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-wc-light/40 text-center">
+        <div class="w-14 h-14 bg-wc-light/50 rounded-full flex items-center justify-center mx-auto mb-5">
+          <svg class="w-7 h-7 text-wc-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <h3 class="text-wc-blue text-lg mb-2">Education</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Educational lectures and materials for patients and caregivers.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 px-6 bg-wc-blue text-white">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl mb-3">Who We Serve</h2>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-8 rounded-full"></div>
+    <p class="text-wc-light text-lg mb-14 max-w-2xl mx-auto">
+      Serving the Northwest Arkansas community of 450,000 — patients and families from newborns to 89 years old.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+      <div class="bg-white/10 rounded-2xl p-7">
+        <h3 class="text-wc-light text-lg mb-3">Primary Immune Deficiencies</h3>
+        <p class="text-white/80 text-sm leading-relaxed">Supporting those diagnosed with conditions affecting the immune system's ability to fight infection.</p>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-7">
+        <h3 class="text-wc-light text-lg mb-3">Hereditary Angioedema</h3>
+        <p class="text-white/80 text-sm leading-relaxed">Providing community, resources, and advocacy for patients managing hereditary angioedema.</p>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-7">
+        <h3 class="text-wc-light text-lg mb-3">Severe Allergic Reactions</h3>
+        <p class="text-white/80 text-sm leading-relaxed">Assisting patients and families living with severe allergic conditions and anaphylaxis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="py-24 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl text-wc-blue mb-3">About Us</h2>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-10 rounded-full"></div>
+    <p class="text-gray-700 text-lg leading-relaxed mb-12">
+      White Cell, Inc. was founded in 2009 and received its 501(c)(3) non-profit designation in May 2010.
+      We are committed to improving the lives of patients and families affected by immune system disorders
+      throughout the Northwest Arkansas region.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl px-8 py-4 text-sm text-gray-600">
+        <div class="font-bauhaus text-wc-blue text-base mb-1">Founded</div>
+        2009
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl px-8 py-4 text-sm text-gray-600">
+        <div class="font-bauhaus text-wc-blue text-base mb-1">Status</div>
+        501(c)(3) Non-Profit
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl px-8 py-4 text-sm text-gray-600">
+        <div class="font-bauhaus text-wc-blue text-base mb-1">EIN</div>
+        27-0461424
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="bg-white rounded-lg px-4 py-2">
+      <img src="/images/logo-horizontal.png" alt="White Cell Inc." class="h-9">
+    </div>
+    <p class="text-gray-400 text-sm text-center">
+      &copy; 2026 White Cell, Inc. All rights reserved.<br>
+      <span class="text-xs text-gray-500">501(c)(3) Non-Profit Organization &bull; EIN: 27-0461424</span>
+    </p>
+    <p class="text-gray-500 text-sm">www.whitecell-inc.org</p>
+  </div>
+</footer>
+
+
+</body>
 </html>
