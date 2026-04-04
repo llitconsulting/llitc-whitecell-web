@@ -1,0 +1,111 @@
+{{ define "header" }}
+<header class="sticky top-0 z-50 bg-white shadow-md">
+  <nav class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/">
+      <img src="/images/logo-horizontal.png" alt="White Cell Inc." class="h-12">
+    </a>
+    <ul class="hidden md:flex gap-8 font-bauhaus font-medium text-wc-blue">
+      <li><a href="/#mission"   class="hover:text-wc-light transition-colors duration-200">Mission</a></li>
+      <li><a href="/#services"  class="hover:text-wc-light transition-colors duration-200">Services</a></li>
+      <li><a href="/#about"     class="hover:text-wc-light transition-colors duration-200">About</a></li>
+      <li><a href="/donations/" class="text-wc-light border-b-2 border-wc-light">Donations</a></li>
+    </ul>
+    <!-- Mobile menu button -->
+    <button
+      class="md:hidden text-wc-blue"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <ul class="flex flex-col font-bauhaus font-medium text-wc-blue px-6 py-4 gap-4">
+      <li><a href="/#mission"   class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Mission</a></li>
+      <li><a href="/#services"  class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a></li>
+      <li><a href="/#about"     class="block hover:text-wc-light transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a></li>
+      <li><a href="/donations/" class="block text-wc-light" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Donations</a></li>
+    </ul>
+  </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+
+<!-- Page Hero -->
+<section class="bg-wc-blue py-16 px-6 text-center">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl text-white mb-4">Donations</h1>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-6 rounded-full"></div>
+    <p class="text-wc-light text-lg">
+      We are grateful for the generosity of our donors and community partners who help us
+      support patients and families living with immune deficiencies in Northwest Arkansas.
+    </p>
+  </div>
+</section>
+
+<!-- Photo Gallery -->
+<section class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl text-wc-blue text-center mb-3">Our Donors</h2>
+    <div class="w-16 h-1 bg-wc-light mx-auto mb-14 rounded-full"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+        <img
+          src="/images/donations/2012-Walmart-Donation.jpg"
+          alt="2012 Walmart Donation to White Cell Inc."
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-5">
+          <h3 class="text-wc-blue font-bauhaus text-lg mb-1">Walmart Donation</h3>
+          <p class="text-gray-500 text-sm">2012</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+        <img
+          src="/images/donations/WhiteCell-Donation-from-Beta-Sigma-Phi.jpg"
+          alt="Donation from Beta Sigma Phi to White Cell Inc."
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-5">
+          <h3 class="text-wc-blue font-bauhaus text-lg mb-1">Beta Sigma Phi Donation</h3>
+          <p class="text-gray-500 text-sm">A generous gift from the Beta Sigma Phi sorority.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+        <img
+          src="/images/donations/WhiteCell-Feather-Art-Donation.jpg"
+          alt="Feather Art Donation to White Cell Inc."
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-5">
+          <h3 class="text-wc-blue font-bauhaus text-lg mb-1">Feather Art Donation</h3>
+          <p class="text-gray-500 text-sm">A unique art piece donated to support our mission.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "footer" }}
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="bg-white rounded-lg px-4 py-2">
+      <img src="/images/logo-horizontal.png" alt="White Cell Inc." class="h-9">
+    </div>
+    <p class="text-gray-400 text-sm text-center">
+      &copy; {{ now.Year }} White Cell, Inc. All rights reserved.<br>
+      <span class="text-xs text-gray-500">501(c)(3) Non-Profit Organization &bull; EIN: 27-0461424</span>
+    </p>
+    <p class="text-gray-500 text-sm">www.whitecell-inc.org</p>
+  </div>
+</footer>
+{{ end }}
